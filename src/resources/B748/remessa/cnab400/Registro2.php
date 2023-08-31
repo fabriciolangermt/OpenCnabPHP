@@ -87,7 +87,7 @@ class Registro2 extends Generico2 {
     }
 
     protected function get_nosso_numero() {
-        $ano = date_format(strtotime($this->entryData['data_emissao']), 'y');
+        $ano = date('y', strtotime($this->entryData['data_emissao']), 'y');
         $modulo11 = self::modulo11(str_pad(RemessaAbstract::$entryData['agencia'], 4, 0, STR_PAD_LEFT)
                         . str_pad(RemessaAbstract::$entryData['posto'], 2, 0, STR_PAD_LEFT)
                         . str_pad(RemessaAbstract::$entryData['codigo_beneficiario'], 5, 0, STR_PAD_LEFT)
