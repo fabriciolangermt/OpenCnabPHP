@@ -37,7 +37,7 @@ class Registro0 extends Generico0
             'default' => '0',
             'tipo' => 'int',
             'required' => true),
-        'uso_bb1' => array(
+        'convenio' => array(
             'tamanho' => 20,
             'default' => ' ',
             'tipo' => 'alfa',
@@ -49,7 +49,7 @@ class Registro0 extends Generico0
             'required' => true),
         'agencia_dv' => array(
             'tamanho' => 1,
-            'default' => '',
+            'default' => '0',
             'tipo' => 'alfa',
             'required' => true),
         'conta' => array(
@@ -74,7 +74,7 @@ class Registro0 extends Generico0
             'required' => true),
         'nome_banco' => array(
             'tamanho' => 30,
-            'default' => 'CRESOL CONFEDERACAO',
+            'default' => 'CRESOL',
             'tipo' => 'alfa',
             'required' => true),
         'filler3' => array(
@@ -138,4 +138,9 @@ class Registro0 extends Generico0
             'tipo' => 'alfa',
             'required' => true)
     );
+
+    protected function set_convenio($value)
+    {
+        $this->data['convenio'] = \CnabPHP\RemessaAbstract::$entryData['convenio'];
+    }
 }

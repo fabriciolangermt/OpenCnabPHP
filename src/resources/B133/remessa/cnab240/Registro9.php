@@ -39,8 +39,8 @@ class Registro9 extends Generico9
             'required' => true),
         'filler2' => array(
             'tamanho' => 6,
-            'default' => ' ',
-            'tipo' => 'alfa',
+            'default' => '0',
+            'tipo' => 'int',
             'required' => true),
         'filler3' => array(
             'tamanho' => 205,

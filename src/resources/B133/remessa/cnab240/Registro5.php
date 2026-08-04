@@ -32,8 +32,13 @@ class Registro5 extends Generico5
             'default' => '0',
             'tipo' => 'int',
             'required' => true),
+        'filler2' => array(
+            'tamanho' => 92,
+            'default' => '0',
+            'tipo' => 'int',
+            'required' => true),
         'filler3' => array(
-            'tamanho' => 217,
+            'tamanho' => 125,
             'default' => ' ',
             'tipo' => 'alfa',
             'required' => true),

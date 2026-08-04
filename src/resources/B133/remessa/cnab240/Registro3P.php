@@ -249,13 +249,19 @@ class Registro3P extends Generico3
         }
     }
 
+    const CARTEIRA_DV = '09';
+
+    protected function set_codigo_carteira($value)
+    {
+        $this->data['codigo_carteira'] = '0';
+    }
+
     protected function set_nosso_numero($value)
     {
-        $carteira    = isset($this->entryData['codigo_carteira']) ? $this->entryData['codigo_carteira'] : '';
-        $nossoNumero = preg_replace('/\D/', '', $value);
-        $digito      = self::calcularDigitoVerificador($carteira . $nossoNumero);
+        $nossoNumero = str_pad(preg_replace('/\D/', '', $value), 11, '0', STR_PAD_LEFT);
+        $digito      = self::calcularDigitoVerificador(self::CARTEIRA_DV . $nossoNumero);
 
-        $this->data['nosso_numero'] = str_pad($nossoNumero . $digito, 12, '0', STR_PAD_LEFT);
+        $this->data['nosso_numero'] = $nossoNumero . $digito;
     }
 
     protected function set_especie_titulo($value)

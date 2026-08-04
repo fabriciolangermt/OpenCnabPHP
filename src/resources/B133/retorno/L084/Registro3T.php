@@ -78,7 +78,7 @@ class Registro3T extends Generico3
             'default' => '',
             'tipo' => 'int',
             'required' => true),
-        'numero_documento' => array(
+        'seu_numero' => array(
             'tamanho' => 15,
             'default' => '',
             'tipo' => 'alfa',
@@ -109,7 +109,7 @@ class Registro3T extends Generico3
             'default' => '',
             'tipo' => 'alfa',
             'required' => true),
-        'seu_numero' => array(
+        'identificacao_titulo_empresa' => array(
             'tamanho' => 25,
             'default' => '',
             'tipo' => 'alfa',

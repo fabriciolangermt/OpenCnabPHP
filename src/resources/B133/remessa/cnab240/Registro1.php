@@ -59,27 +59,7 @@ class Registro1 extends Generico1
             'tipo' => 'int',
             'required' => true),
         'convenio' => array(
-            'tamanho' => 9,
-            'default' => '0',
-            'tipo' => 'int',
-            'required' => true),
-        'cobranca' => array(
-            'tamanho' => 4,
-            'default' => '0000',
-            'tipo' => 'int',
-            'required' => true),
-        'carteira' => array(
-            'tamanho' => 2,
-            'default' => '0',
-            'tipo' => 'int',
-            'required' => true),
-        'variacao' => array(
-            'tamanho' => 3,
-            'default' => '000',
-            'tipo' => 'int',
-            'required' => true),
-        'situacao_arquivo' => array(
-            'tamanho' => 2,
+            'tamanho' => 20,
             'default' => ' ',
             'tipo' => 'alfa',
             'required' => true),
@@ -144,11 +124,6 @@ class Registro1 extends Generico1
             'tipo' => 'alfa',
             'required' => true),
     );
-
-    protected function set_carteira($value)
-    {
-        $this->data['carteira'] = RemessaAbstract::$entryData['carteira'];
-    }
 
     protected function set_convenio($value)
     {
